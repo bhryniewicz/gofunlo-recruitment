@@ -20,12 +20,12 @@ export const Options: FC<OptionsProps> = ({ setIsRecommendations }) => {
   ];
 
   return (
-    <div className="flex flex-col w-[20vw]">
-      <h1 className="text-primary text-4xl font-semibold mb-12">
+    <div className="flex flex-col w-full md:w-[20vw]">
+      <h1 className="text-primary text-4xl font-semibold mb-2 md:mb-12">
         Moje konto
       </h1>
       <nav>
-        <ul className="flex flex-col gap-8">
+        <ul className="flex flex-col gap-2 md:gap-8">
           {options.map(({ text, onClick, icon }) => {
             return (
               <OptionItem

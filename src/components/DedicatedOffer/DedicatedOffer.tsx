@@ -20,8 +20,8 @@ export const DedicatedOffer = ({ trip }: { trip: ProductData }) => {
 
   return (
     <Link href="/bookings">
-      <div className="flex gap-8 shadow-lg rounded-md  h-[200px]">
-        <div className="w-[400px] relative">
+      <div className="flex gap-8 shadow-lg rounded-md h-[200px]">
+        <div className="w-[400px] relative hidden md:block">
           <Image
             src={media && media.length > 0 ? media[0].url : Logo}
             alt="trip image"

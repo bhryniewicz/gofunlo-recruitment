@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center w-full px-32">
+    <nav className="flex justify-between items-center w-full px-4 md:px-32">
       <div className="flex">
         <Link href="/">
           <Image src={Logo} alt="funlo logo" width={200} height={70} />
         </Link>
-        <ul className="flex items-center gap-8 ml-16 text-nav">
+        <ul className="hidden md:flex items-center gap-8 ml-16 text-nav">
           <li>Obozy</li>
           <li>Połkolonie</li>
           <li>Wycieczki szkolne</li>

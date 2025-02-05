@@ -3,7 +3,11 @@ import Image from "next/image";
 import { formatDate } from "date-fns";
 import { Bookings } from "@/types/bookings";
 
-export const BookingsScreen = ({ productBookings }: { productBookings: Bookings }) => {
+export const BookingsScreen = ({
+  productBookings,
+}: {
+  productBookings: Bookings;
+}) => {
   const {
     product_data: {
       name,
@@ -28,9 +32,9 @@ export const BookingsScreen = ({ productBookings }: { productBookings: Bookings 
   const { participants, parent, total_price } = bookings[0];
 
   return (
-    <div className="px-32 py-16">
-      <div className="flex gap-8 mb-4">
-        <div className="w-[800px] h-[500px] relative">
+    <div className="px-4 md:px-32 py-16">
+      <div className="flex flex-col md:flex-row gap-8 mb-4">
+        <div className="w-full md:w-[800px] h-[200px] md:h-[500px] relative">
           <Image src={main_photo?.url} alt={name} fill />
         </div>
         <div className="flex flex-col gap-2 text-lg">
@@ -50,7 +54,7 @@ export const BookingsScreen = ({ productBookings }: { productBookings: Bookings 
       </div>
       <p className="text-primary text-4xl font-semibold mb-4">{tripName}</p>
       <div className="flex flex-col gap-2">
-        <div className="flex gap-12">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-12">
           <p>
             Lokalizacja:{" "}
             <strong>
@@ -95,7 +99,7 @@ export const BookingsScreen = ({ productBookings }: { productBookings: Bookings 
       </div>
 
       <h3 className="text-3xl font-bold my-4">Uczestnicy</h3>
-      <ul className="grid grid-cols-2 gap-8 ">
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
         {participants?.map((participant) => (
           <TripParticipantCard participant={participant} key={participant.id} />
         ))}
