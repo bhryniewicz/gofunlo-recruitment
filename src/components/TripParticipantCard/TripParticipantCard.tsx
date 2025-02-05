@@ -1,4 +1,4 @@
-import { Participant } from "@/app/api/bookings/route";
+import { Participant } from "@/types/bookings";
 import { formatDate } from "date-fns";
 
 export const TripParticipantCard = ({

@@ -1,7 +1,7 @@
 import { cleanup, render, screen, within } from "@testing-library/react";
 import { TripParticipantCard } from "@/components/TripParticipantCard";
-import { Participant } from "@/app/api/bookings/route";
 import { expect, describe, it, beforeEach } from "vitest";
+import { Participant } from "@/types/bookings";
 
 beforeEach(() => {
   cleanup();

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Options } from "@/components/Options";
 import { DedicatedOffer } from "@/components/DedicatedOffer";
-import { ProductsData } from "@/app/api/products/route";
+import { ProductsData } from "@/types/products";
 
 export const Home = ({ trips }: { trips: ProductsData }) => {
   const [isRecommendations, setIsRecommendations] = useState<boolean>(false);

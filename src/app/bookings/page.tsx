@@ -1,7 +1,7 @@
-import { Booking } from "../api/bookings/route";
-import { Bookings as BookingsScreen } from "@/screens/Bookings";
+import { BookingsScreen } from "@/screens/Bookings";
+import { Bookings } from "@/types/bookings";
 
-const getBookings = async (): Promise<Booking> => {
+const getBookings = async (): Promise<Bookings> => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/bookings`);
   if (!res.ok) throw new Error("Failed to fetch products");
 

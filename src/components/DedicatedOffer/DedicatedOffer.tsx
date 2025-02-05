@@ -2,7 +2,7 @@ import Image from "next/image";
 import Logo from "@/assets/logo.png";
 import { BriefcaseBusiness, Calendar, DollarSign, MapPin } from "lucide-react";
 import Link from "next/link";
-import { ProductData } from "@/app/api/products/route";
+import { ProductData } from "@/types/products";
 
 export const DedicatedOffer = ({ trip }: { trip: ProductData }) => {
   const {

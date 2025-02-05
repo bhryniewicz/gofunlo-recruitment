@@ -1,9 +1,9 @@
 import { TripParticipantCard } from "@/components/TripParticipantCard";
 import Image from "next/image";
 import { formatDate } from "date-fns";
-import { Booking } from "@/app/api/bookings/route";
+import { Bookings } from "@/types/bookings";
 
-export const Bookings = ({ productBookings }: { productBookings: Booking }) => {
+export const BookingsScreen = ({ productBookings }: { productBookings: Bookings }) => {
   const {
     product_data: {
       name,
