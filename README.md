@@ -2,7 +2,7 @@
 
 Aby wlaczyć projekt musisz:
 
-Jezeli masz wersje node < v18
+Jezeli masz wersje node > v18
 
 ```bash
 
