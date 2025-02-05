@@ -1,13 +1,19 @@
+"use client";
+
 import { TripParticipantCard } from "@/components/TripParticipantCard";
 import Image from "next/image";
 import { formatDate } from "date-fns";
 import { Bookings } from "@/types/bookings";
+import { ChevronLeftIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const BookingsScreen = ({
   productBookings,
 }: {
   productBookings: Bookings;
 }) => {
+  const router = useRouter();
+
   const {
     product_data: {
       name,
@@ -32,7 +38,11 @@ export const BookingsScreen = ({
   const { participants, parent, total_price } = bookings[0];
 
   return (
-    <div className="px-4 md:px-32 py-16">
+    <div className="px-4 md:px-32 py-4 md:py-16">
+      <h3 className="flex gap-2 mb-4" onClick={() => router.back()}>
+        <ChevronLeftIcon />
+        Powrot do ofert
+      </h3>
       <div className="flex flex-col md:flex-row gap-8 mb-4">
         <div className="w-full md:w-[800px] h-[200px] md:h-[500px] relative">
           <Image src={main_photo?.url} alt={name} fill />
