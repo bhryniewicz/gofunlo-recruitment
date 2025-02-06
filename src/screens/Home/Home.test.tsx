@@ -1,5 +1,5 @@
 import { render, fireEvent, screen } from "@testing-library/react";
-import { Home } from "@/screens/Home"; // Make sure to import the Home component
+import { Home } from "@/screens/Home"; 
 import trips from "@/data/response_products.json";
 import { describe, expect, it } from "vitest";
 
